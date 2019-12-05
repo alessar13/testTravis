@@ -7,7 +7,7 @@ install:
  - npm ci
  - npm i -g webpack
 script:
- -npm run build
+ - npm run build
 deploy:
  provider: pages
  skip_cleanup: true
