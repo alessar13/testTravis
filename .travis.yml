@@ -1,0 +1,32 @@
+language: node_js
+node_js:
+  - 12.8.1
+cache: npm
+install:
+ - yarn install
+ - npm ci
+ - npm i -g webpack
+script:
+ - npm run build
+deploy:
+ provider: pages
+ skip_cleanup: true
+ github-token: $GITHUB_TOKEN
+ on:
+  branch: master
+
+
+
+
+
+
+
+#before_install:
+#install:
+#before_script:
+#script: node index.js
+#after_success:
+#after_failure:
+#before_deploy:
+#deploy:
+#after_deploy:
